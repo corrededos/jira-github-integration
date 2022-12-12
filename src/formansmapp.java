@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 public class formansmapp{
-
-    protected Mono<Forsakring> fetchSingleInsurance(UUID employmentId, AnstallningSelectable... selects) {
-        var filter = insuranceIdQueryFilter(insuranceId).and(insuranceTypeFilter);
-        return fetchInsurance(true, filter, selects).next();
-    }
+    
+    private static final Logger logger = LoggerFactory.getLogger(SapODataConfiguration.class);
+    public static final String FORMAN_BACKEND = "forman";
+    private final RetryRegistry retryRegistry;
+   
 }
